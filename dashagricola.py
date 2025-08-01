@@ -31,7 +31,7 @@ scatter_umidita = px.scatter(df, x='Umidità del Suolo (%)', y='Produzione (kg)'
 scatter_temp = px.scatter(df, x='Temperatura (°C)', y='Produzione (kg)', title="Relazione tra Temperatura e Produzione")
 box_precip = px.box(df, x='Precipitazioni (mm)', y='Produzione (kg)', title="Relazione tra Precipitazioni e Produzione", )
 
-media_mensile = df.groupby('Mese')[['Produzione (kg)', 'Consumo Idrico (litri)']].mean()
+media_mensile = df.groupby('Month')[['Produzione (kg)', 'Consumo Idrico (litri)']].mean()
 ordine_cronologico = ['Gennaio', 'Febbraio', 'Marzo', 'Aprile', 'Maggio', 'Giugno',
                       'Luglio', 'Agosto', 'Settembre', 'Ottobre', 'Novembre', 'Dicembre']
 graf_barre = px.bar(media_mensile, x=media_mensile.index, y=['Produzione (kg)', 'Consumo Idrico (litri)'], title="Valori Medi Mensili di Produzione e Consumo Idrico")
