@@ -3,9 +3,7 @@ from dash import Dash, dcc, html
 import dash_bootstrap_components as dbc
 import pandas as pd
 import numpy as np
-import locale
 
-locale.setlocale(locale.LC_ALL, 'it_IT')
 temperatura = np.random.normal(loc=20, scale=5, size=365)
 umidita_suolo = np.random.uniform(low=10, high=50, size=365)
 precip = np.random.poisson(lam=5, size=365)
@@ -84,5 +82,4 @@ app.layout = (
 ]))
 
 if __name__ == '__main__':
-    app.run_server(debug=False)
-
+    app.run(debug=False)
