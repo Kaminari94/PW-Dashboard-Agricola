@@ -46,7 +46,7 @@ pip install -r requirements.txt
 3. Avvia l’app:
 
 ```bash
-python app.py
+python dashagricola.py
 ```
 
 4. Apri il browser e visita:  
